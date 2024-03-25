@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
     <title>Tailwind Page</title>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -12,16 +13,49 @@
         <h1 class="text-4xl font-medium"><a href="#hero">🚀Acme Rockets</a></h1>
         <div>
           <button
-            id="mobile-open-btn"
-            class="text-2xl sm:hidden focus:outline-none"
+            id="hamburger-button"
+            class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
           >
-            &#9776;
+            <!-- &#9776; -->
+            <div
+              class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+            ></div>
           </button>
         </div>
         <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
           <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
           <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
           <a href="#contact-us" class="hover:opacity-90">Contact US</a>
+        </nav>
+      </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-68 bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden"
+      >
+        <!-- <button class="text-8xl self-end px-6">
+          &times
+        </button> -->
+        <nav
+          class="flex flex-col min-h-screen items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full text-center hover:opacity-90 py-6"
+            >Home</a
+          >
+          <a href="#rockets" class="w-full text-center hover:opacity-90 py-6"
+            >Our Rockets</a
+          >
+          <a
+            href="#testimonials"
+            class="w-full text-center hover:opacity-90 py-6"
+            >Testimonials</a
+          >
+          <a href="#contact-us" class="w-full text-center hover:opacity-90 py-6"
+            >Contact Us</a
+          >
+          <a href="#footer" class="w-full text-center hover:opacity-90 py-6"
+            >Legal</a
+          >
         </nav>
       </section>
     </header>
@@ -55,7 +89,10 @@
         <img src="./img/rocketdab.png" alt="Rocket Dab" class="w-1/2" />
       </section>
       <hr class="mx-auto bg-black dark:bg-white w-1/2" />
-      <section id="rockets" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
+      <section
+        id="rockets"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
         <h2
           class="text-4xl font-bold text-center text-slate-900 dark:text-white sm:text-5xl mb-6"
         >
@@ -129,7 +166,10 @@
         </ul>
       </section>
       <hr class="mx-auto bg-black dark:bg-white w-1/2" />
-      <section id="testimonials" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
+      <section
+        id="testimonials"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
         <h2
           class="text-4xl font-bold text-center text-slate-900 dark:text-white sm:text-5xl mb-6"
         >
